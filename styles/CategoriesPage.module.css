@@ -1,0 +1,193 @@
+.grid_container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  justify-content: center;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.category {
+  height: 250px;
+  width: 250px;
+  border: 1px solid rgb(128, 128, 128);
+  background: url("../assets/barn1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 0, 212);
+  font-size: 1.1em;
+}
+.category:hover {
+  cursor: pointer;
+  color: red;
+}
+.category:first-of-type {
+  background: url("../assets/barn2.jfif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.category:nth-of-type(3) {
+  background: url("../assets/documentary.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  background-image: url(../assets/categorybackground.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+}
+.category:nth-of-type(4) {
+  background: url("../assets/drama.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category:nth-of-type(5) {
+  background: url("../assets/economy.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category:nth-of-type(6) {
+  background: url("../assets/comedy.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category:nth-of-type(7) {
+  background: url("../assets/culture.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category:nth-of-type(8) {
+  background: url("../assets/lifestyle.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category:nth-of-type(9) {
+  background: url("../assets/outlook.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category:nth-of-type(10) {
+  background: url("../assets/Music.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category:nth-of-type(11) {
+  background: url("../assets/otherlanguage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category:nth-of-type(12) {
+  background: url("../assets/sverige.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category:nth-of-type(13) {
+  background: url("../assets/community.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category:nth-of-type(14) {
+  background: url("../assets/sport.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category:nth-of-type(15) {
+  background: url("../assets/science.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bannerText {
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 2px 2px purple;
+  font-weight: 350;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerText {
+  margin: auto;
+  text-align: center;
+  font-size: 4em;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1050px) {
+  .grid_container {
+    grid-template-columns: auto;
+  }
+}

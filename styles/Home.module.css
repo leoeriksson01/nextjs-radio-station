@@ -1,0 +1,32 @@
+.home {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner {
+  margin-top: 50px;
+  background: url("../assets/banner.jpg");
+  height: 80vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerText {
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 2px 2px purple;
+  font-weight: 350;
+  font-size: 60px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 550px) {
+  .bannerText {
+    font-size: 40px;
+  }
+}

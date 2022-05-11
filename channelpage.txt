@@ -1,0 +1,58 @@
+const json = "format=json";
+const paginationFalse = "pagination=false";
+import style from "../../styles/Channels.module.css";
+import { Card } from "react-bootstrap";
+
+export const getStaticPaths = async () => {
+  const res = await fetch(
+    `http://api.sr.se/api/v2/channels?${json}&${paginationFalse}`
+  );
+  const data = await res.json();
+
+  const paths = data.channels.map((channel) => {
+    return {
+      params: { id: channel.id.toString() },
+    };
+  });
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async (context) => {
+  const res = await fetch(
+    `http://api.sr.se/api/v2/scheduledepisodes?channelid=${context.params.id}&format=json&pagnation=false`
+  );
+  const data = await res.json();
+  return {
+    props: { channel: data },
+  };
+};
+
+const Details = ({ channel }) => {
+  return (
+    <div className={style.container}>
+      <div className={style.background}> </div>
+      {channel.schedule.map((channel, i) => (
+        <div className={style.content} key={i}>
+          <Card className={style.card2}>
+            <Card.Img variant="top" src={channel.imageurl} />
+            <div className={style.cardMain}>
+              <Card.Body>
+                <Card.Title className={style.cardTitle}>
+                  {channel.title} {channel.channel.name}
+                </Card.Title>
+                <Card.Text>{channel.description}</Card.Text>
+                <div className={style.times}></div>
+              </Card.Body>
+            </div>
+          </Card>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Details;
+ 
